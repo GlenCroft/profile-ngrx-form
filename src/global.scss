@@ -24,3 +24,34 @@
 @import "~@ionic/angular/css/text-alignment.css";
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
+
+
+// Elements
+.label {
+    opacity: .8;
+}
+
+.card-edit-icon {
+    font-size: 24px;
+}
+
+
+// Utilities
+
+// - Display
+.d-flex {
+    display: flex;
+}
+
+
+// - Text
+.text-center {
+    text-align: center;
+}
+
+
+// - Colours
+.bg-primary {
+    background-color: var(--ion-toolbar-background);
+    color: #fff;
+}
