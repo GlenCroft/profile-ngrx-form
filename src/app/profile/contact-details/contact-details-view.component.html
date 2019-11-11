@@ -1,0 +1,39 @@
+
+<ion-card>
+  <ion-card-header class="d-flex ion-justify-content-between" (click)="onEditContact()">
+    <ion-card-title>Contact Details</ion-card-title>
+    <ion-icon name="create" class="edit-icon"></ion-icon>
+  </ion-card-header>
+
+  <ion-card-content>
+    <ion-grid>
+      <ion-row class="ion-align-items-baseline">
+        <ion-col size="auto">
+          <ion-icon name="mail"></ion-icon>
+        </ion-col>
+        <ion-col>
+          {{ contactDetailsData.email }}
+        </ion-col>
+      </ion-row>
+      <ion-row class="ion-align-items-baseline">
+        <ion-col size="auto">
+          <ion-icon name="call"></ion-icon>
+        </ion-col>
+        <ion-col>
+          {{ contactDetailsData.phone }}
+        </ion-col>
+      </ion-row>
+      <ion-row class="ion-align-items-baseline">
+        <ion-col size="auto">
+          <ion-icon name="home"></ion-icon>
+        </ion-col>
+        <ion-col>
+          {{ contactDetailsData.line1 }},<br/>
+          <ng-container *ngIf="contactDetailsData.line2">{{ contactDetailsData.line2 }},<br/></ng-container>
+          {{ contactDetailsData.town }},<br/>
+          {{ contactDetailsData.postCode }}
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-card-content>
+</ion-card>

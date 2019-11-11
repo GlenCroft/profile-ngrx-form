@@ -1,0 +1,39 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-title>
+            Edit Contact Details
+        </ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <form class="ion-padding" [formGroup]="formGroup" *ngIf="formGroup">
+        <ion-item class="ion-margin-bottom">
+            <ion-label position="stacked">Email</ion-label>
+            <ion-input type="email" [formControlName]="'email'" name="email"></ion-input>
+        </ion-item>
+        <ion-item class="ion-margin-bottom">
+            <ion-label position="stacked">Phone</ion-label>
+            <ion-input type="text" [formControlName]="'phone'" name="phone"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label position="stacked">Address</ion-label>
+            <ion-input type="text" [formControlName]="'line1'" name="line1" placeholder="Line 1"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-input type="text" [formControlName]="'line2'" name="line2" placeholder="Line 2 (optional)"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-input type="text" [formControlName]="'town'" name="town" placeholder="Town"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-input type="text" [formControlName]="'postCode'" name="postCode" placeholder="Post Code"></ion-input>
+        </ion-item>
+    </form>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-button expand="block" color="primary" (click)="onSave()">Save</ion-button>
+  </ion-toolbar>
+</ion-footer>
